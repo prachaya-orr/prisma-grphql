@@ -2,8 +2,18 @@ type Query{
 users :[User]
 }
 
+type Mutation{
+    createUser(data: CreateUserInput): User
+}
+
 type User {
 id: String!
 name: String!
 email: String!
+}
+
+input CreateUserInput{
+    id: String!
+    name: String!
+    email: String!
 }

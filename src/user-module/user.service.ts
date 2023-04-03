@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { User } from 'src/graphql';
+import { CreateUserInput, User } from 'src/graphql';
 import { PrismaService } from './prisma.services';
 
 @Injectable()
@@ -8,5 +8,18 @@ export class UserService {
 
   async getUsers(): Promise<User[]> {
     return this.prisma.prismaUsers.findMany({});
+  }
+
+  async createUser(input : CreateUserInput):Promise<User>{
+    try {
+      let newData = { ...input}
+
+      this.prisma.prismaUsers.create({data:newData})
+      return
+    } catch (err) {
+      console.log(err);
+      return err
+    }
+
   }
 }
