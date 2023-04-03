@@ -8,11 +8,11 @@ CREATE TABLE "prismaUsers" (
 );
 
 -- CreateTable
-CREATE TABLE "prismaCourse" (
+CREATE TABLE "prismaCourses" (
     "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "description" TEXT NOT NULL,
     "duration" TEXT NOT NULL,
 
-    CONSTRAINT "prismaCourse_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "prismaCourses_pkey" PRIMARY KEY ("id")
 );

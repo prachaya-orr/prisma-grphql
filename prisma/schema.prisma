@@ -16,7 +16,7 @@ model prismaUsers {
   email String
 }
 
-model prismaCourse {
+model prismaCourses {
   id          String @id
   name        String
   description String

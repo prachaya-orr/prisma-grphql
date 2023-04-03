@@ -9,7 +9,16 @@
 /* eslint-disable */
 
 export abstract class IQuery {
+    abstract courses(): Nullable<Nullable<Course>[]> | Promise<Nullable<Nullable<Course>[]>>;
+
     abstract users(): Nullable<Nullable<User>[]> | Promise<Nullable<Nullable<User>[]>>;
+}
+
+export class Course {
+    id: string;
+    name: string;
+    description: string;
+    duration: string;
 }
 
 export class User {
