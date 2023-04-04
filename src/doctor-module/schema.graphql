@@ -1,0 +1,9 @@
+type Query {
+  doctors: [Doctor]
+}
+
+type Doctor {
+  id: String!
+  name: String!
+  email:String!
+}
